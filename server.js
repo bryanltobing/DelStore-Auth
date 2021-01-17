@@ -1,7 +1,7 @@
 const fastify = require('fastify')({ logger: false })
-const PORT = process.env.PORT || 9000
 
 require('dotenv').config()
+const PORT = process.env.PORT
 require('./db/mongoose')
 
 fastify.register(require('./routes/auth'), { prefix: '/auth' })
