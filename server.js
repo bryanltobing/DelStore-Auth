@@ -39,7 +39,7 @@ fastify.register(require('fastify-cors'), {
 
 const start = async () => {
   try {
-    const response = await fastify.listen(PORT)
+    const response = await fastify.listen(PORT, '0.0.0.0')
     console.log(`Server run on ${response}`)
   } catch (err) {
     fastify.log.error(err)
